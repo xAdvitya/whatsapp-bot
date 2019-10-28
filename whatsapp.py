@@ -1,15 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-options = Options()
-options.add_argument("start-maximized")
-
 
 driver = webdriver.Chrome(executable_path="C:/Users/Advitya/Downloads/c.exe")
 driver.get('http://web.whatsapp.com')
 
+print("Enter group or contact names saparated by commas\n")
 
-name = list(input('enter names: '))
+name = input('enter names: ')
 name = name.split(",")
 
 msg = input("enter message: ")
